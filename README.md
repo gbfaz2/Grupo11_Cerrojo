@@ -15,7 +15,6 @@ Mucho cuidado cuando cambiéis un pin o la configuración del reloj en el archiv
  El código es educado y respeta unas "Zonas Seguras". Tienes que escribir **EXCLUSIVAMENTE** entre las líneas de comentarios que dicen `USER CODE BEGIN` y `USER CODE END`.
         
         * **ASÍ SÍ (Se guarda para siempre):**
->>>>>>> 5da854bc11ef9ee3a7d296229ac67b98cd5486a9
             ```c
             /* USER CODE BEGIN 2 */
                // Tu código aquí está blindado 🛡️
@@ -24,7 +23,6 @@ Mucho cuidado cuando cambiéis un pin o la configuración del reloj en el archiv
             ```
             
         * **ASÍ NO (Se borrará al actualizar pines):**
->>>>>>> 5da854bc11ef9ee3a7d296229ac67b98cd5486a9
             ```c
             int main(void) {
                HAL_Init();
