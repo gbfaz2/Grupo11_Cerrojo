@@ -6,29 +6,33 @@ Este documento sirve como **guía paso a paso** para que todos los integrantes d
 
 ---
 
-0.  **⚡ PROTOCOLO ANTI-BORRADO (STM32CubeIDE) - ¡LEER O MORIR! 💀**
+0.  **PROTOCOLO ANTI-BORRADO (STM32CubeIDE) - ¡LEER O MORIR! 💀**
 Mucho cuidado cuando cambiéis un pin o la configuración del reloj en el archivo de diseño (`.ioc`). Al darle al botón de generar código (el engranaje ⚙️), el programa **BORRA Y REESCRIBE** archivos enteros.
 
-* **⚠️ EL PELIGRO:** El archivo `main.c` es propiedad de STM32. Si escribes tu código suelto por ahí, al regenerar los pines, el programa pensará que es suciedad y **LO BORRARÁ** sin piedad. Adios trabajo.
+* **EL PELIGRO:** El archivo `main.c` es propiedad de STM32. Si escribes tu código suelto por ahí, al regenerar los pines, el programa pensará que es suciedad y **LO BORRARÁ** sin piedad. Adios trabajo.
 
-* **🛡️ LA SOLUCIÓN (Los Búnkeres):**
+* **LA SOLUCIÓN (Los Búnkeres):**
  El código es educado y respeta unas "Zonas Seguras". Tienes que escribir **EXCLUSIVAMENTE** entre las líneas de comentarios que dicen `USER CODE BEGIN` y `USER CODE END`.
         
-        * ✅ **ASÍ SÍ (Se guarda para siempre):**
+        * **ASÍ SÍ (Se guarda para siempre):**
+>>>>>>> 5da854bc11ef9ee3a7d296229ac67b98cd5486a9
             ```c
             /* USER CODE BEGIN 2 */
                // Tu código aquí está blindado 🛡️
                juego_iniciar();
             /* USER CODE END 2 */
             ```
-        * ❌ **ASÍ NO (Se borrará al actualizar pines):**
+            
+        * **ASÍ NO (Se borrará al actualizar pines):**
+>>>>>>> 5da854bc11ef9ee3a7d296229ac67b98cd5486a9
             ```c
             int main(void) {
                HAL_Init();
                // Mi código aquí suelto... ¡PELIGRO! ☠️
             ```
 
-    * **💡 TRUCO PRO:** Si creáis vuestros propios archivos (ej: `juego.c` y `juego.h`), esos **NUNCA** se tocan. Es el territorio más seguro.
+    * **TRUCO PRO:** Si creáis vuestros propios archivos (ej: `juego.c` y `juego.h`), esos **NUNCA** se tocan. Es el territorio más seguro.
+>>>>>>> 5da854bc11ef9ee3a7d296229ac67b98cd5486a9
 
 ---
 
@@ -174,4 +178,8 @@ Si un compañero ha subido cambios al `main` (por ejemplo, el TOP actualizado) y
 
 1.  **El archivo `.gitignore` es intocable:** Este archivo evita que subamos basura al servidor. No lo borres ni le cambies el nombre.
 2.  **Conflictos:** Si al subir cambios Git te avisa de un "CONFLICT", **no borres nada**. Significa que dos personas han tocado la misma línea de código. Avisad al grupo para resolverlo juntos.
+<<<<<<< HEAD
 3.  **Orden:** Los archivos fuente (`.vhd`) deben estar siempre dentro de la carpeta `src` (o `sources_1/new`). No creéis archivos sueltos en la raíz del proyecto.
+=======
+3.  **Orden:** Los archivos fuente (`.vhd`) deben estar siempre dentro de la carpeta `src` (o `sources_1/new`). No creéis archivos sueltos en la raíz del proyecto.
+>>>>>>> 5da854bc11ef9ee3a7d296229ac67b98cd5486a9
